@@ -1,0 +1,17 @@
+# Gradle & Build Caches
+.gradle/
+build/
+composeApp/build/
+.kotlin/
+kotlin-js-store/
+
+# IDE
+.idea/
+*.iml
+local.properties
+
+# OS specific files
+.DS_Store
+
+# Note: The output generated in the root folder (composeApp.js, composeApp.wasm, skiko.*, index.html) 
+# is INTENTIONALLY NOT ignored because GitHub Pages needs these files to serve the WebAssembly app.

@@ -1,0 +1,141 @@
+<resources>
+    <string name="brand_name">Yasin.</string>
+    <string name="hero_name">Yasin Tanriverdi</string>
+    <string name="hero_title">Staff Android Engineer</string>
+    <string name="hero_bio">I am a mobile engineer specializing in Android development with extensive experience across the entire software development lifecycle. Currently, I am working as Staff Android Engineer at eBay.</string>
+
+    <!-- Navigation -->
+    <string name="nav_about">About</string>
+    <string name="nav_experience">Experience</string>
+    <string name="nav_skills">Skills</string>
+    <string name="content_desc_theme">Toggle Theme</string>
+    <string name="content_desc_profile">Profile Image</string>
+
+    <!-- Section Headers -->
+    <string name="section_career">Career</string>
+    <string name="section_projects">Supported Projects</string>
+    <string name="section_my_apps">My Apps</string>
+    <string name="section_education">Education</string>
+    <string name="section_technical_expertise">Skills &amp; Expertise</string>
+
+    <!-- Social & Contact Labels -->
+    <string name="label_github">GitHub</string>
+    <string name="label_linkedin">LinkedIn</string>
+    <string name="label_email">Email</string>
+
+    <!-- Roles & Companies -->
+    <string name="ebay_role">Staff Android Engineer</string>
+    <string name="ebay_company">eBay</string>
+    <string name="zenjob_role">Senior Android Engineer</string>
+    <string name="zenjob_company">Zenjob GmbH</string>
+    <string name="argela_role">Software Engineer</string>
+    <string name="argela_company">Argela Technologies</string>
+    <string name="huawei_role">Android Developer</string>
+    <string name="huawei_company">Huawei Technologies</string>
+    <string name="netas_role_engineer">Software Design Engineer</string>
+    <string name="netas_role_intern">Software Engineering Intern</string>
+    <string name="netas_company">Netaş</string>
+    <string name="ebay_app_title">eBay</string>
+    <string name="ebay_app_desc">Online shopping &amp; selling</string>
+    <string name="ebay_app_url">https://play.google.com/store/apps/details?id=com.ebay.mobile</string>
+    <string name="zenjob_app_title">Zenjob</string>
+    <string name="zenjob_app_desc">Flexible Nebenjobs</string>
+    <string name="zenjob_app_url">https://play.google.com/store/apps/details?id=zenjob.android</string>
+    <string name="lenz_app_title">Lenz</string>
+    <string name="lenz_app_desc">IPTV and multimedia streaming service</string>
+    <string name="lenz_app_url">https://play.google.com/store/apps/details?id=com.likotv</string>
+    <string name="hola_app_title">Hola</string>
+    <string name="hola_app_desc">Live Video Chat</string>
+    <string name="hola_app_url">https://play.google.com/store/apps/details?id=com.skylb.hola.app</string>
+    <string name="my_apps_google_play_url">https://play.google.com/store/apps/developer?id=Yasin+Tanriverdi</string>
+    <string name="my_apps_app_store_url">https://apps.apple.com/developer/yasin-tanriverdi/id1794849293</string>
+    <string name="label_google_play">Google Play</string>
+    <string name="label_app_store">App Store</string>
+    <string name="edu_master_role">Master Degree: Industrial Engineering</string>
+    <string name="edu_bachelor_role">Bachelor Degree: Computer Engineering</string>
+
+    <!-- URLs & Contact -->
+    <string name="github_url">https://github.com/yasintanriverdi</string>
+    <string name="linkedin_url">https://www.linkedin.com/in/yasin-tanriverdi/</string>
+    <string name="email">yasintanriverdi@gmail.com</string>
+
+    <!-- Experience Dates -->
+    <string name="ebay_date">12/2021 — Present | Berlin, Germany</string>
+    <string name="zenjob_date">10/2018 — 12/2021 | Berlin, Germany</string>
+    <string name="argela_date">03/2018 — 10/2018 | Istanbul, Turkey</string>
+    <string name="huawei_date">03/2016 — 03/2018 | Istanbul, Turkey</string>
+    <string name="netas_engineer_date">02/2015 — 03/2016 | Istanbul, Turkey</string>
+    <string name="netas_intern_date">09/2014 — 01/2015 | Istanbul, Turkey</string>
+
+    <!-- Project Descriptions -->
+    <string name="label_view_on_play_store">View on Play Store</string>
+
+    <!-- Education -->
+    <string name="edu_university">Bahcesehir University</string>
+    <string name="edu_master_date">2018 — Istanbul, Turkey</string>
+    <string name="edu_bachelor_date">2015 — Istanbul, Turkey</string>
+
+    <!-- Experience Duties -->
+    <string-array name="ebay_duties">
+        <item>Supporting the development of the flagship eBay Android application as part of the eBay Germany team.</item>
+    </string-array>
+
+    <string-array name="zenjob_duties">
+        <item>Directed the end-to-end development of the Zenjob Android application.</item>
+        <item>Collaborated within an Agile cross-platform team, implementing strategic improvements.</item>
+    </string-array>
+
+    <string-array name="argela_duties">
+        <item>Engineered a secure Android messaging application featuring video and voice calling capabilities.</item>
+    </string-array>
+
+    <string-array name="huawei_duties">
+        <item>Contributed to the development of native Android IPTV applications for Huawei Technologies.</item>
+    </string-array>
+
+    <string-array name="netas_engineer_duties">
+        <item>Maintained various enterprise-level applications for telecommunications clients.</item>
+    </string-array>
+
+    <string-array name="netas_intern_duties">
+        <item>Began as an intern contributing to telecommunications software and transitioning into a full-time engineering role.</item>
+    </string-array>
+
+    <!-- Skills Categories -->
+    <string-array name="skills_arch">
+        <item>System Architecture</item>
+        <item>App Modularization</item>
+        <item>Clean Architecture</item>
+        <item>Technical Strategy</item>
+    </string-array>
+
+    <string-array name="skills_core">
+        <item>Kotlin &amp; Coroutines</item>
+        <item>Jetpack Compose</item>
+        <item>Kotlin Multiplatform (KMP)</item>
+        <item>Dependency Injection</item>
+    </string-array>
+
+    <string-array name="skills_perf">
+        <item>Memory Optimization</item>
+        <item>CI/CD &amp; Build Systems</item>
+        <item>Automated Testing</item>
+        <item>App Telemetry</item>
+    </string-array>
+
+    <string-array name="skills_lead">
+        <item>Cross-functional Leadership</item>
+        <item>Mentorship &amp; Coaching</item>
+        <item>Agile Methodologies</item>
+        <item>Engineering Culture</item>
+    </string-array>
+
+    <string name="skill_cat_arch">Architecture &amp; Scale</string>
+    <string name="skill_cat_core">Core Technologies</string>
+    <string name="skill_cat_perf">Performance &amp; Tooling</string>
+    <string name="skill_cat_lead">Engineering Leadership</string>
+
+    <!-- Footer -->
+    <string name="footer_built_with">Built with Compose Multiplatform.</string>
+    <string name="footer_copyright">© Yasin Tanriverdi</string>
+</resources>
