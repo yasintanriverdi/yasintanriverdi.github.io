@@ -67,51 +67,79 @@ fun Navbar(
 
 @Composable
 fun HeroSection() {
-    Row(
-        modifier = Modifier.padding(vertical = 48.dp).fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Column(
-            modifier = Modifier.weight(1f).padding(end = 32.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            Text(
-                text = stringResource(Res.string.hero_name),
-                color = MaterialTheme.colorScheme.onBackground,
-                fontSize = 48.sp,
-                fontWeight = FontWeight.Bold,
-                lineHeight = 56.sp
-            )
-            Text(
-                text = stringResource(Res.string.hero_title),
-                color = MaterialTheme.colorScheme.secondary,
-                fontSize = 24.sp
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            Text(
-                text = stringResource(Res.string.hero_bio),
-                color = MaterialTheme.colorScheme.secondary,
-                fontSize = 16.sp,
-                lineHeight = 24.sp
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-            SocialChips()
-        }
+    BoxWithConstraints(modifier = Modifier.padding(vertical = 48.dp).fillMaxWidth()) {
+        val isMobile = maxWidth < 600.dp
         
-        // Load the profile image
-        painterResource(Res.drawable.profile)?.let { painter ->
-            androidx.compose.foundation.Image(
-                painter = painter,
-                contentDescription = stringResource(Res.string.content_desc_profile),
-                modifier = Modifier
-                    .size(160.dp),
-                contentScale = ContentScale.Crop
-            )
+        if (isMobile) {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(32.dp),
+                horizontalAlignment = Alignment.Start
+            ) {
+                // Image above text on mobile
+                painterResource(Res.drawable.profile)?.let { painter ->
+                    androidx.compose.foundation.Image(
+                        painter = painter,
+                        contentDescription = stringResource(Res.string.content_desc_profile),
+                        modifier = Modifier.size(160.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+                HeroTextAndChips()
+            }
+        } else {
+            Row(
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Box(modifier = Modifier.weight(1f).padding(end = 32.dp)) {
+                    HeroTextAndChips()
+                }
+                
+                // Image on right on desktop
+                painterResource(Res.drawable.profile)?.let { painter ->
+                    androidx.compose.foundation.Image(
+                        painter = painter,
+                        contentDescription = stringResource(Res.string.content_desc_profile),
+                        modifier = Modifier.size(160.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+            }
         }
     }
 }
 
+@Composable
+fun HeroTextAndChips() {
+    Column(
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text(
+            text = stringResource(Res.string.hero_name),
+            color = MaterialTheme.colorScheme.onBackground,
+            fontSize = 48.sp,
+            fontWeight = FontWeight.Bold,
+            lineHeight = 56.sp
+        )
+        Text(
+            text = stringResource(Res.string.hero_title),
+            color = MaterialTheme.colorScheme.secondary,
+            fontSize = 24.sp
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(
+            text = stringResource(Res.string.hero_bio),
+            color = MaterialTheme.colorScheme.secondary,
+            fontSize = 16.sp,
+            lineHeight = 24.sp
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SocialChips()
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun SocialChips() {
     val uriHandler = LocalUriHandler.current
@@ -119,9 +147,10 @@ fun SocialChips() {
     val linkedinUrl = stringResource(Res.string.linkedin_url)
     val email = stringResource(Res.string.email)
 
-    Row(
+    FlowRow(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalAlignment = Alignment.CenterVertically
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+        maxItemsInEachRow = Int.MAX_VALUE
     ) {
         SocialChipPainter(
             painter = painterResource(Res.drawable.ic_github),
@@ -412,13 +441,17 @@ fun SectionTitle(title: String) {
     )
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ExperienceItem(role: String, company: String, date: String, duties: List<String>) {
     Column(modifier = Modifier.padding(bottom = 32.dp)) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
+        FlowRow(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
             Text(role, color = MaterialTheme.colorScheme.onBackground, fontSize = 18.sp, fontWeight = FontWeight.Bold)
             if (company.isNotEmpty()) {
-                Text(" @ $company", color = MaterialTheme.colorScheme.secondary, fontSize = 18.sp)
+                Text("@ $company", color = MaterialTheme.colorScheme.secondary, fontSize = 18.sp)
             }
         }
         Spacer(modifier = Modifier.height(4.dp))
