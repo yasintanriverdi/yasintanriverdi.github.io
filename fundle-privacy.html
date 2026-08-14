@@ -6,54 +6,85 @@
   <title>Fundle Privacy Policy</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       max-width: 820px;
       margin: 48px auto;
       padding: 0 20px;
       line-height: 1.7;
       color: #111;
     }
-    h1, h2 { margin-top: 28px; }
+    h1, h2, h3 { margin-top: 28px; }
     a { color: #0a66c2; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .nav-links {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
   </style>
 </head>
 <body>
   <h1>Fundle Privacy Policy</h1>
-  <p>Effective date: June 20, 2026</p>
+  <p><strong>Effective Date:</strong> August 14, 2026</p>
 
-  <p>Fundle helps users manage their personal finances, wallets, budgets, and transactions across multiple devices.</p>
+  <p>Fundle, developed by Yasin Tanrıverdi, is dedicated to protecting your privacy. This Privacy Policy explains how the multi-platform application handles and safeguards your personal and financial information.</p>
 
-  <h2>Information We Collect</h2>
-  <p>Fundle requires an account to use and stores your financial data (such as wallets, transactions, budgets, and custom categories) securely on our cloud servers. We also collect your email address for authentication purposes.</p>
-  <p>The app uses third-party services such as Firebase Auth, Google Analytics, Firebase Crashlytics, and Google AdMob, which may collect limited technical and diagnostic information, analytics data, coarse location, device identifiers, advertising data, and app interaction data to support app functionality, stability, and ad delivery.</p>
-
-  <h2>How We Use Information</h2>
-  <p>We use your information strictly to operate the app, sync your data across your devices, improve performance, understand app usage, and display ads where applicable.</p>
-
-  <h2>Local Data</h2>
-  <p>Your financial data is securely stored and associated with your account. We do not sell your personal financial data to third parties. You can request the deletion of your account and all associated data at any time.</p>
-
-  <h2>Third-Party Services</h2>
-  <p>Fundle may use:</p>
+  <h2>1. Information We Collect</h2>
   <ul>
-    <li>Firebase Analytics</li>
-    <li>Firebase Remote Config</li>
-    <li>Google AdMob</li>
-    <li>Google User Messaging Platform (UMP)</li>
+    <li><strong>Account Information:</strong> When you register or sign in (via email or Apple Sign-In), your user ID, email address, and profile name are stored securely on our servers to manage your account and synchronize data across your devices.</li>
+    <li><strong>Financial & Transaction Data:</strong> Information you record in the App—including wallets, transactions, funds, budgets, categories, and split expenses—is securely stored in our cloud database to provide cross-device synchronization.</li>
+    <li><strong>Device & Diagnostic Data:</strong> Anonymous crash logs, app stability metrics, and device identifiers (such as OS version and device model) may be collected via Firebase Crashlytics and Firebase Analytics to monitor app health and resolve technical issues.</li>
   </ul>
 
-  <h2>Third-Party Privacy Policies</h2>
+  <h2>2. AI Receipt Scanner & Image Processing</h2>
+  <p>Fundle includes an AI-powered receipt scanner that extracts merchant names, purchase dates, totals, and line items from photos you capture or select from your gallery:</p>
   <ul>
-    <li><a href="https://www.google.com/policies/privacy/">Google Privacy Policy</a></li>
-    <li><a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a></li>
+    <li><strong>On-Device Validation:</strong> An initial optical character check runs locally on your device to ensure valid receipt text is present before any cloud processing.</li>
+    <li><strong>Encrypted AI Processing:</strong> Valid receipt images are transmitted over secure, encrypted TLS/HTTPS connections to our backend and processed using Google Cloud Vertex AI (Gemini).</li>
+    <li><strong>No AI Model Training:</strong> Receipt images are strictly processed for real-time text extraction. <strong>Your images and parsed receipt details are never used to train public AI foundation models</strong>, nor are they retained after parsing is complete.</li>
+    <li><strong>No Advertising Sharing:</strong> Receipt scan data is never sold, shared, or used for advertising or marketing profiling.</li>
   </ul>
 
-  <h2>Your Choices</h2>
-  <p>Where required, the app may provide privacy options and consent controls related to advertising.</p>
+  <h2>3. In-App Purchases & Subscriptions (Fundle Plus)</h2>
+  <p>When you subscribe to Fundle Plus, payment transactions are processed entirely through the Apple App Store or Google Play Store. Subscription status and entitlement verification are securely managed via <strong>RevenueCat</strong>.</p>
+  <p><strong>Fundle never collects, processes, or stores your credit card, bank account, or payment credentials.</strong> All billing data is handled exclusively by Apple and Google in accordance with their respective privacy policies.</p>
 
-  <h2>Contact</h2>
-  <p>If you have questions about this Privacy Policy, contact:</p>
+  <h2>4. Advertising (Standard Tier)</h2>
+  <p>For users on our free standard tier, Fundle may display non-intrusive advertisements served by Google AdMob. Where required by applicable data protection laws (such as GDPR), the Google User Messaging Platform (UMP) consent dialog is presented to allow managing ad consent and personalized tracking preferences. Fundle Plus subscribers enjoy a completely ad-free experience.</p>
+
+  <h2>5. How Your Data Is Used</h2>
+  <p>Your information is used solely to:</p>
+  <ul>
+    <li>Provide, maintain, and synchronize your personal finance data across devices.</li>
+    <li>Authenticate your account and secure your data.</li>
+    <li>Process AI receipt scans at your request.</li>
+    <li>Validate premium subscription entitlements.</li>
+    <li>Diagnose errors, fix bugs, and optimize app performance.</li>
+  </ul>
+  <p><strong>Your personal or financial data is never sold to any third parties.</strong></p>
+
+  <h2>6. Third-Party Service Providers</h2>
+  <p>Fundle integrates with reputable third-party service providers solely to enable app functionality:</p>
+  <ul>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase (Authentication, Firestore, Analytics, Crashlytics, Remote Config)</a></li>
+    <li><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">Google Cloud Vertex AI (Receipt Processing)</a></li>
+    <li><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat (Subscription & In-App Purchase Management)</a></li>
+    <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob & User Messaging Platform (Advertising & Consent)</a></li>
+  </ul>
+
+  <h2>7. Data Retention & Account Deletion</h2>
+  <p>You retain full control over your information. You can export your data (CSV) or request the complete deletion of your account and all associated financial records directly through the App settings or by emailing <a href="mailto:support.fundle@gmail.com">support.fundle@gmail.com</a>.</p>
+
+  <h2>8. Contact Us</h2>
+  <p>If you have any questions or concerns regarding this Privacy Policy or your data, please contact:</p>
   <p><a href="mailto:support.fundle@gmail.com">support.fundle@gmail.com</a></p>
+
+  <div class="nav-links">
+    <a href="https://yasintanriverdi.github.io/fundle-terms.html">Terms of Service & EULA</a>
+    <a href="https://yasintanriverdi.github.io/fundle-support.html">Customer Support</a>
+  </div>
 </body>
 </html>
